@@ -26,3 +26,17 @@ Declare a tuple consisting of the integer, float,
 a Boolean, and the array that you previously declared.
 Print out the tuple in its Debug representation.
 */
+
+pub(crate) fn main_test() {
+  let num_1 = 1_337;
+  let num_2 = num_1 as i16;
+  let num_3 = 4.567;
+  let with_milk = true;
+  let with_sugar = false;
+  let is_my_type_of_coffee = with_milk && with_sugar;
+  let is_acceptable_coffee = with_milk || with_sugar;
+  let num_array: [i8; 4] = [1, 2, 3, 4];
+  dbg!(num_array);
+  let fancy_tuple = (num_1, num_3, with_milk, num_array);
+  dbg!(fancy_tuple);
+}
