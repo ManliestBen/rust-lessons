@@ -1,7 +1,16 @@
+mod coding_challenge;
+
 fn main() {
   let num_tortillas = 5;
   let num_beef_slices = 10;
   let my_name ="Ben";
+
+  // this is an example of shadowing
+  let num_tortillas = 10;
+  println!("I have {} tortillas", num_tortillas);
+  // shadowing is different from mutability
+  // shadowing allows us to reuse the same name for a new variable with a different value
+  // mutability allows us to change the value of a variable
 
   let mut counter = 0; // mut is used to make the variable mutable
   counter = counter + 1;
@@ -34,6 +43,7 @@ fn main() {
   // example of function call
   print_name(my_name);
 
+  coding_challenge::main_test();
 }
 
 fn print_name(name: &str) {
