@@ -30,3 +30,29 @@ println!("{:?}", alphabets("aardvark")); -> (true, false)
 println!("{:?}", alphabets("zoology"));  -> (false, true)
 println!("{:?}", alphabets("zebra"));    -> (true, true)
 */
+
+pub (crate) fn main_test() {
+  fn apply_to_jobs(number: i32, title: &str) {
+    println!("I'm applying to {number} {title} jobs.")
+  }
+  apply_to_jobs(3, "engineering");
+
+  fn is_even(num: i32) -> bool {
+    num % 2 == 0
+  }
+  let test = is_even(5);
+  println!("{test}");
+
+  fn alphabets(text: &str) -> (bool, bool) {
+    let has_a = text.contains("a");
+    let has_z = text.contains("z");
+    (has_a, has_z)
+  }
+  println!("{:?}", alphabets("aardvark"));
+  println!("{:?}", alphabets("zoology")); 
+  println!("{:?}", alphabets("zebra"));
+  let mystery = {
+    5 + 4;
+  };
+  println!("{:?}", mystery)
+}
