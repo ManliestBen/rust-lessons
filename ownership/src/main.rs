@@ -73,7 +73,7 @@ fn main() {
 
   let cake = bake_cake();
   println!("I now have a {} cake", cake);
-
+  // println!("{burger}"); // ownership is moved to add_fries
   coding_challenge_1::main();
 
   let drink = String::from("Snapple");
